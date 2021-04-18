@@ -6,20 +6,6 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
-    background-color: #E0FBFC;
-}
-
-main 
-{
-    display: grid;
-
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 50px 1fr 1fr 100px;
-
-    gap: 10 px;
-
-    padding: 10px;
-    box-sizing: border-box;
 }
 
 a {
@@ -28,13 +14,26 @@ a {
 li {
     list-style: none;
 }
-header {
+
+.hero-image {
+    height: 100%;
+    width: 100%;
+    padding-bottom: 1em;
+    padding-top: 1em;
+    background-image: url('images/26293.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.navbar {
     width: 100%;
     height: 80px;
     line-height: 80px;
     text-align: center;
     font-family: 'Lato', sans-serif;
-    background-color: #3D5A80;
+    background-color: #323232;
 }
 .brand {
     width: auto;
@@ -57,7 +56,7 @@ header {
 .menu ul a {
     width: 20%;
     height: inherit;
-    color: #222;
+    color: #E0FBFC;
     display: inline-block;
 }
 .menu ul a:hover {
