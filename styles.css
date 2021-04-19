@@ -26,14 +26,18 @@ li {
     padding-top: 1em;
     background: rgb(237,196,84);
     background: linear-gradient(35deg, rgba(237,196,84,1) 0%, rgba(237,119,84,1) 100%);
-    z-index: 40;
+    z-index: 0;
 }
+
+/* Main Page */
 .main-image {
   margin: 1px;
+  position: relative;
 }
 
 .sun-background {
   text-align: center;
+  z-index: 1;
 }
 
 .slogan {
@@ -49,15 +53,19 @@ li {
   text-shadow: 	
   4px 4px 0px #EDC454, 
   7px 7px 0px rgba(0, 0, 0, 0.2);
-  z-index: 3;
   letter-spacing: .05em;
+  z-index: 2;
 }
 
-.social-media {
-  text-align: center;
-  padding-bottom: 100%;
+.icon-twitch {
+  position: relative;
+  top: 50%;
+  bottom: 50%;
+  left: 50%;
+  right: 50%;
+  transform: translateY(-50%);
+  z-index: 9999;
 }
-
 .brand {
     width: auto;
     height: 100%;
@@ -65,6 +73,8 @@ li {
     margin: 0 0 0 5%;
 }
 
+
+/* Navigation Bar */
 .navbar {
     position: fixed;
     padding-top: 28%;
@@ -115,6 +125,44 @@ li {
   
   .navbar_links a li:active {
       color: #bb7146;
+  }
+
+  /* News Page */
+
+  .container-news {
+    height: 100vh;
+    width: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 50px 1fr 1fr;
+
+    gap: 10px;
+
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .news-title {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    grid-row-start: 2;
+    grid-row-end: span 2;
+    position: relative;
+    top: 2em;
+    left: 1.4em;
+
+    font-size: 5em;
+    text-transform: uppercase;
+    font-family: 'Poppins', 'sans-serif';
+    line-height: .82em;
+    color: #F1FBFE;
+    text-shadow: 	
+    4px 4px 0px #EDC454, 
+    7px 7px 0px rgba(0, 0, 0, 0.2);
+    letter-spacing: .05em;
   }
 
   /* Footer */
